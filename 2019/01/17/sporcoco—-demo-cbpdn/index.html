@@ -14,13 +14,13 @@
 <meta property="og:site_name" content="Welcome to Paulin‘s Blog">
 <meta property="og:description" content="sporco matlab版本中的demo_cbpdn的代码详解： 首先运行代码的时候出现了错误，没有使用脚本getdata获取数据。 需要在linux下运行 ./getData.sh 用来获取图片，还需要convert指令，可能conda里面包括。所以以后还是安装conda比较方便。 将所需要的数据集下载（就是一些图片）下来之后，lena的图片没有了，所以换了一张图片。 然后运行，进行迭代，图像">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/hexo/source/_posts/sporcoco%E2%80%94-demo-cbpdn/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/hexo/source/_posts/sporcoco—-demo-cbpdn/2.jpg">
-<meta property="og:updated_time" content="2019-01-18T09:01:25.079Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/2.jpg">
+<meta property="og:updated_time" content="2019-01-18T09:04:07.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sporcoco—_demo_cbpdn">
 <meta name="twitter:description" content="sporco matlab版本中的demo_cbpdn的代码详解： 首先运行代码的时候出现了错误，没有使用脚本getdata获取数据。 需要在linux下运行 ./getData.sh 用来获取图片，还需要convert指令，可能conda里面包括。所以以后还是安装conda比较方便。 将所需要的数据集下载（就是一些图片）下来之后，lena的图片没有了，所以换了一张图片。 然后运行，进行迭代，图像">
-<meta name="twitter:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/hexo/source/_posts/sporcoco%E2%80%94-demo-cbpdn/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Welcome to Paulin‘s Blog" type="application/atom+xml">
   
@@ -105,16 +105,16 @@
 <p>然后导入图片，转换为灰度然后除以255，就是一个和像素大小一致的一个数组，768x512</p>
 <h4 id="matlab知识点"><a href="#matlab知识点" class="headerlink" title="matlab知识点"></a><strong>matlab知识点</strong></h4><p>厄米特矩阵就是自共轭矩阵，第i行j列的元素和第j行i列的元素共轭相等。</p>
 <p>bsxfun(@times,Df,x)，bsxfun函数是对两个矩阵A，B的每一个元素进行指定的计算，并且有自动扩维的功能。</p>
-<p><img src="/2019/01/17/sporcoco—-demo-cbpdn/hexo/source/_posts/sporcoco%E2%80%94-demo-cbpdn/1.png" alt="1"></p>
+<p><img src="/2019/01/17/sporcoco—-demo-cbpdn/1.png" alt="1"></p>
 <p>该函数的具体实现过程是：<br>1.判断A和B的维度是否相同，如果相同，直接A./B；2.如果A和B的维度不同，则A或者B必须有一个在某个维度上是1，比如，上例中的B在列方向维度是1，那么，该函数将会对列向量B在列方向上进行复制，使其与矩阵A具有相同的列维度，然后，再进行A./B维度扩充后的矩阵</p>
-<h4 id="理论推导"><a href="#理论推导" class="headerlink" title="理论推导"></a>理论推导</h4><p><img src="/2019/01/17/sporcoco—-demo-cbpdn/hexo\source\_posts\sporcoco—-demo-cbpdn\2.jpg" alt="2"></p>
+<h4 id="理论推导"><a href="#理论推导" class="headerlink" title="理论推导"></a>理论推导</h4><p><img src="/2019/01/17/sporcoco—-demo-cbpdn/2.jpg" alt="2"></p>
 <p>目标函数如上，求Xm的最小值，这个是去噪的问题，给定了d，去求X，对于求字典的后面再研究。所以推导</p>
 
   	
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/" data-id="cjr1tf7fn0007kgu95yj00ofc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/" data-id="cjr1tk58x0008rsu9z5lr9tjz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo的博客技术/">hexo的博客技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/图像/">图像</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/科研/">科研</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo的博客技术/">hexo的博客技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/图像/">图像</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/科研/">科研</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul>
     </div>
   </div>
 
