@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>consensus | Welcome to Paulin‘s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="resolution 分辨率 discriminative 判别 解决低维度、低分辨率的限制，同时能够在高纬度有一定的应用，3维多光谱去马赛克，4D光场合成。 生成模型是比较好的，能够作为大量重建任务的先验。 基于path-based的论文是 7  23   1都是稀疏编码的内容，所以说path-based应该是稀疏编码里面的东西。 现在的卷积稀疏编码由于占用了很多的内存，不能够伸缩，将卷积系数编">
+<meta name="keywords" content="回看论文consensus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="consensus">
+<meta property="og:url" content="http://yoursite.com/2019/01/19/consensus/index.html">
+<meta property="og:site_name" content="Welcome to Paulin‘s Blog">
+<meta property="og:description" content="resolution 分辨率 discriminative 判别 解决低维度、低分辨率的限制，同时能够在高纬度有一定的应用，3维多光谱去马赛克，4D光场合成。 生成模型是比较好的，能够作为大量重建任务的先验。 基于path-based的论文是 7  23   1都是稀疏编码的内容，所以说path-based应该是稀疏编码里面的东西。 现在的卷积稀疏编码由于占用了很多的内存，不能够伸缩，将卷积系数编">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/11.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/6.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/7.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/8.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/9.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/19/consensus/10.jpg">
+<meta property="og:updated_time" content="2019-01-21T03:07:48.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="consensus">
+<meta name="twitter:description" content="resolution 分辨率 discriminative 判别 解决低维度、低分辨率的限制，同时能够在高纬度有一定的应用，3维多光谱去马赛克，4D光场合成。 生成模型是比较好的，能够作为大量重建任务的先验。 基于path-based的论文是 7  23   1都是稀疏编码的内容，所以说path-based应该是稀疏编码里面的东西。 现在的卷积稀疏编码由于占用了很多的内存，不能够伸缩，将卷积系数编">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/19/consensus/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Welcome to Paulin‘s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Welcome to Paulin‘s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-consensus" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/19/consensus/" class="article-date">
+  <time datetime="2019-01-19T11:59:35.000Z" itemprop="datePublished">2019-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/科研/">科研</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      consensus
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		
+  	
+  	  <p>resolution 分辨率 discriminative 判别</p>
+<p>解决低维度、低分辨率的限制，同时能够在高纬度有一定的应用，3维多光谱去马赛克，4D光场合成。</p>
+<p>生成模型是比较好的，能够作为大量重建任务的先验。</p>
+<p>基于path-based的论文是 7  23   1都是稀疏编码的内容，所以说path-based应该是稀疏编码里面的东西。</p>
+<p>现在的卷积稀疏编码由于占用了很多的内存，不能够伸缩，将卷积系数编码应用到3D还有4D是个难题。</p>
+<p>使用CSC构建无监督生成模型。将大规模的问题分解成使用内存资源少的子问题。</p>
+<p>文章分为解决filter Subproblem 和 coefficient subproblem 还有joint optimization三个部分</p>
+<p>总的目标函数：</p>
+<p><img src="/2019/01/19/consensus/1.jpg" alt="1"></p>
+<p>已经将约束条件加入了，表示成这种形式，然后当解决问题的时候分别 进行增广拉格朗日 表示然后进行求解。</p>
+<h5 id="Filter-Subproblem"><a href="#Filter-Subproblem" class="headerlink" title="Filter Subproblem"></a><strong>Filter Subproblem</strong></h5><p><img src="/2019/01/19/consensus/2.jpg" alt="2"></p>
+<p>使用admm的套路进行增广拉格朗日的表示：</p>
+<p><img src="/2019/01/19/consensus/3.jpg" alt="3"></p>
+<p>给定了Z之后对d进行一定的优化，使其收敛。</p>
+<p><img src="/2019/01/19/consensus/4.jpg" alt="4"></p>
+<p>共识体现在.<img src="/2019/01/19/consensus/11.jpg" alt="11"></p>
+<p>求均值，是对所有的dk求均值。</p>
+<p>line3是有解的最小二乘问题：</p>
+<p><img src="/2019/01/19/consensus/5.jpg" alt="5"></p>
+<p>line5可以表示成近端算子的形式，二范数的近端算子是projection，line5是将纳木达t的那一部分提进去了：</p>
+<p><img src="/2019/01/19/consensus/6.jpg" alt="6"></p>
+<h5 id="Coefficient-Subproblem"><a href="#Coefficient-Subproblem" class="headerlink" title="Coefficient Subproblem"></a><strong>Coefficient Subproblem</strong></h5><p><img src="/2019/01/19/consensus/7.jpg" alt="7"></p>
+<p><img src="/2019/01/19/consensus/8.jpg" alt="8"></p>
+<p><img src="/2019/01/19/consensus/9.jpg" alt="9"></p>
+<p>y同样也是近端算子，一范数的近端算子是shrinkage。</p>
+<h5 id="Joint-Optimization"><a href="#Joint-Optimization" class="headerlink" title="Joint Optimization"></a><strong>Joint Optimization</strong></h5><p><img src="/2019/01/19/consensus/10.jpg" alt="10"></p>
+<p>两边分别去交替的更新。</p>
+<h5 id="Consensus"><a href="#Consensus" class="headerlink" title="Consensus"></a><strong>Consensus</strong></h5><p>共识体现在，在固定Z求D的过程中，迭代的过程更新y的时候对所有的dk求均值，进行约束。同样在求D的过程中更新y的时候也要对所有的z求均值进行约束。</p>
+<h5 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a><strong>conclusion</strong></h5><p>这篇论文感觉主要是在算法上进行了改进，通过分布式的这种方式同时进行consensus的约束，有了一定的效果。</p>
+<p>通过改进了ffcsc的代码，找出之间的区别就是核心部分。</p>
+
+  	
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/19/consensus/" data-id="cjr5r4y7r0001wsu9kq4gdib8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回看论文consensus/">回看论文consensus</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/20/beginning-c/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          beginning c++
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/18/论文总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">论文总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo的博客技术/">hexo的博客技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ubuntu/">ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/图像/">图像</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/科研/">科研</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Datamining-assignment-in-BUPT/">Datamining assignment in BUPT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sporco-demo-bpdn代码详解/">sporco_demo_bpdn代码详解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu系统上一些操作指令/">ubuntu系统上一些操作指令</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/北邮计算机专硕研一考试总结/">北邮计算机专硕研一考试总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/北邮高级计算机体系结构最后作业，读书笔记/">北邮高级计算机体系结构最后作业，读书笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客技术/">博客技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回看论文consensus/">回看论文consensus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图像的一些知识/">图像的一些知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/对于ADMM用于卷积系数编码中参数rho的更新/">对于ADMM用于卷积系数编码中参数rho的更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/对于人生现阶段的问题的总结和警示/">对于人生现阶段的问题的总结和警示</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/对看过的论文的关键点总结对比/">对看过的论文的关键点总结对比</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/收录了一些大佬的hexo的教程/">收录了一些大佬的hexo的教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装机/">装机</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Datamining-assignment-in-BUPT/" style="font-size: 10px;">Datamining assignment in BUPT</a> <a href="/tags/sporco-demo-bpdn代码详解/" style="font-size: 10px;">sporco_demo_bpdn代码详解</a> <a href="/tags/ubuntu系统上一些操作指令/" style="font-size: 10px;">ubuntu系统上一些操作指令</a> <a href="/tags/北邮计算机专硕研一考试总结/" style="font-size: 10px;">北邮计算机专硕研一考试总结</a> <a href="/tags/北邮高级计算机体系结构最后作业，读书笔记/" style="font-size: 10px;">北邮高级计算机体系结构最后作业，读书笔记</a> <a href="/tags/博客技术/" style="font-size: 10px;">博客技术</a> <a href="/tags/回看论文consensus/" style="font-size: 10px;">回看论文consensus</a> <a href="/tags/图像的一些知识/" style="font-size: 10px;">图像的一些知识</a> <a href="/tags/对于ADMM用于卷积系数编码中参数rho的更新/" style="font-size: 10px;">对于ADMM用于卷积系数编码中参数rho的更新</a> <a href="/tags/对于人生现阶段的问题的总结和警示/" style="font-size: 10px;">对于人生现阶段的问题的总结和警示</a> <a href="/tags/对看过的论文的关键点总结对比/" style="font-size: 10px;">对看过的论文的关键点总结对比</a> <a href="/tags/收录了一些大佬的hexo的教程/" style="font-size: 10px;">收录了一些大佬的hexo的教程</a> <a href="/tags/装机/" style="font-size: 10px;">装机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/20/FFCSC/">FFCSC</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/20/beginning-c/">beginning c++</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/19/consensus/">consensus</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/18/论文总结/">论文总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/18/西瓜书/">西瓜书</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Paulin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
