@@ -7,17 +7,17 @@
   
   <title>consensus_code | Welcome to Paulin‘s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="consensus的代码详解">
+  <meta name="description" content="consensus的代码详解 有必要整理以下consensus的全过程。以BUU为例 主函数： 1.加载原图像b 2.设置kernel_size的大小，lambda，verbose猜测用来输出判断 3.使用高斯噪声对原信号进行模糊。得到了smooth_init 4.初始化verbose_admm=”brief” max_it=1000,tol=1e-4,init=[] 5.执行admm_learn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="consensus_code">
 <meta property="og:url" content="http://yoursite.com/2019/01/21/consensus-code/index.html">
 <meta property="og:site_name" content="Welcome to Paulin‘s Blog">
-<meta property="og:description" content="consensus的代码详解">
+<meta property="og:description" content="consensus的代码详解 有必要整理以下consensus的全过程。以BUU为例 主函数： 1.加载原图像b 2.设置kernel_size的大小，lambda，verbose猜测用来输出判断 3.使用高斯噪声对原信号进行模糊。得到了smooth_init 4.初始化verbose_admm=”brief” max_it=1000,tol=1e-4,init=[] 5.执行admm_learn">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-22T02:06:58.236Z">
+<meta property="og:updated_time" content="2019-02-20T01:20:37.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="consensus_code">
-<meta name="twitter:description" content="consensus的代码详解">
+<meta name="twitter:description" content="consensus的代码详解 有必要整理以下consensus的全过程。以BUU为例 主函数： 1.加载原图像b 2.设置kernel_size的大小，lambda，verbose猜测用来输出判断 3.使用高斯噪声对原信号进行模糊。得到了smooth_init 4.初始化verbose_admm=”brief” max_it=1000,tol=1e-4,init=[] 5.执行admm_learn">
   
     <link rel="alternate" href="/atom.xml" title="Welcome to Paulin‘s Blog" type="application/atom+xml">
   
@@ -93,12 +93,26 @@
 		
   	
   	  <p>consensus的代码详解</p>
+<p>有必要整理以下consensus的全过程。以BUU为例</p>
+<p>主函数：</p>
+<p>1.加载原图像b</p>
+<p>2.设置kernel_size的大小，lambda，verbose猜测用来输出判断</p>
+<p>3.使用高斯噪声对原信号进行模糊。得到了smooth_init</p>
+<p>4.初始化verbose_admm=”brief” max_it=1000,tol=1e-4,init=[]</p>
+<p>5.执行admm_learn</p>
+<p>6.然后输出所用时间</p>
+<p>7.保存字典</p>
+<p>admm_learn</p>
+<p>1.psf_s=11 滤波器的大小，k=20滤波器的个数，n=5图像的个数，psf_radius=floor(psf_s/2)=5 需要扩充的边缘的大小，size_x=[106,106,31,5],size_z=[106,106,20,5],size_k_full=[106,106,31,20],size_zhat=[106,106,20,5].</p>
+<p>2.设置的上述的格式，smoothinit=padarray进行扩充边界到106.</p>
+<p>3.定义了主的目标函数，输入值为z和dh，输出为objective；定义proxdatamasked、proxsparse、proxkernelconstraint，三个近端算子。</p>
+<p>4.初始化定义lambda=[lambda_residual,lambda_prior] ,初始化后面要用到的的参数gamma。 gamma_heuristic=60 x lambda_prior x 1/max(b(:))=, gammas_D=[gamma_heuristic,gamma_heuristic] ,gammas_Z=[gamma_heuristic,gamma_heuristic]，varsize_D={size_x,size_k_full}, xi_D={zeros(varsize_D{1}), zeros(varsize_D{2})} , xi_D_hat=zeros(varsize_D{1}), zeros(varsize_D{2}) </p>
 
   	
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/21/consensus-code/" data-id="cjr7sg60n0008f8u9shmi8uih" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/21/consensus-code/" data-id="cjsciifqk0001q4u98xe7xql1" class="article-share-link">Share</a>
       
       
     </footer>

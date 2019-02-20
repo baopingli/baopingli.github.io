@@ -16,7 +16,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/2.jpg">
-<meta property="og:updated_time" content="2019-01-18T09:04:07.027Z">
+<meta property="og:updated_time" content="2019-01-25T13:14:16.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sporcoco—_demo_cbpdn">
 <meta name="twitter:description" content="sporco matlab版本中的demo_cbpdn的代码详解： 首先运行代码的时候出现了错误，没有使用脚本getdata获取数据。 需要在linux下运行 ./getData.sh 用来获取图片，还需要convert指令，可能conda里面包括。所以以后还是安装conda比较方便。 将所需要的数据集下载（就是一些图片）下来之后，lena的图片没有了，所以换了一张图片。 然后运行，进行迭代，图像">
@@ -108,13 +108,13 @@
 <p><img src="/2019/01/17/sporcoco—-demo-cbpdn/1.png" alt="1"></p>
 <p>该函数的具体实现过程是：<br>1.判断A和B的维度是否相同，如果相同，直接A./B；2.如果A和B的维度不同，则A或者B必须有一个在某个维度上是1，比如，上例中的B在列方向维度是1，那么，该函数将会对列向量B在列方向上进行复制，使其与矩阵A具有相同的列维度，然后，再进行A./B维度扩充后的矩阵</p>
 <h4 id="理论推导"><a href="#理论推导" class="headerlink" title="理论推导"></a>理论推导</h4><p><img src="/2019/01/17/sporcoco—-demo-cbpdn/2.jpg" alt="2"></p>
-<p>目标函数如上，求Xm的最小值，这个是去噪的问题，给定了d，去求X，对于求字典的后面再研究。所以推导</p>
+<p>目标函数如上，求Xm的最小值，这个是去噪的问题，给定了d，去求X，对于求字典的后面再研究。去噪的目标函数和卷积稀疏编码的形式一致，由于给定了D所以对d没有了约束就没有了inc二范数的那一下，所以CBPDN可以用来指示在求coefficient参数的那一部分如何进行自适应的rho的设置。</p>
 
   	
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/" data-id="cjr7sg619000qf8u9ms73arab" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/17/sporcoco—-demo-cbpdn/" data-id="cjsciifri000qq4u9it7me618" class="article-share-link">Share</a>
       
       
     </footer>
